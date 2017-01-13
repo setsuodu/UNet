@@ -100,9 +100,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1285784600724554}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.35, y: 0.15, z: 0.4}
-  m_LocalScale: {x: 1, y: 1.5000015, z: 0.6666672}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.35, y: 0.15, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4767172961133056}
   m_RootOrder: 2
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1973384809313256, guid: c27abdb909c827d4e9d4d0594f370d41,
     type: 2}
-  bulletSpawn: {fileID: 0}
+  bulletSpawn: {fileID: 4560317905578714}
 --- !u!114 &114586023878623454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TransformSyncMode: 1
-  m_SendInterval: 0.06666667
+  m_SendInterval: 0.1
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
   m_SyncSpin: 0

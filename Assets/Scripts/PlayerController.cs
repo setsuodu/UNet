@@ -24,20 +24,24 @@ public class PlayerController : NetworkBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Fire();
+            CmdFire();
         }
     }
 
     public override void OnStartLocalPlayer()
     {
         //这个方法只会在本地角色那里调用，当创建角色时
-        base.OnStartLocalPlayer();
+        //base.OnStartLocalPlayer();
         GetComponent<MeshRenderer>().material.color = Color.blue;
     }
 
-    void Fire()
+    [Command] //服务端执行
+    void CmdFire()
     {
-        GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward;
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation); 
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * 10f;
+        Destroy(bullet, 2f);
+
+        NetworkServer.Spawn(bullet);
     }
 }
