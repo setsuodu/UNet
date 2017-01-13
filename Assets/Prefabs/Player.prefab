@@ -525,7 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5582373501e37b84bbafba3f16d315bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 0
+  currentHealth: 100
   healthSlider: {fileID: 114517952045624180}
 --- !u!114 &114954100430373038
 MonoBehaviour:
