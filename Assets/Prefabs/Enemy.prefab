@@ -261,6 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 100
   healthSlider: {fileID: 114582498139149350}
+  destroyOnDeath: 1
 --- !u!114 &114384820775736488
 MonoBehaviour:
   m_ObjectHideFlags: 1
