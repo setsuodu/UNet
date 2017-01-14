@@ -24,6 +24,8 @@ public class Health : NetworkBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
+            RpcRespawn();
+            currentHealth = maxHealth;
             Debug.Log("Death");
         }
     }
@@ -32,4 +34,13 @@ public class Health : NetworkBehaviour
     {
         healthSlider.value = health / (float)maxHealth;
     }
+
+    [ClientRpc] //LocalPlayerss相关的
+    void RpcRespawn()
+    {
+        //if (!isLocalPlayer) return;
+        transform.position = Vector3.zero;
+    }
+
+
 }
